@@ -45,6 +45,12 @@ RUN conda install --quiet --yes \
     'widgetsnbextension=3.5.*'\
     'xlrd=1.2.*' \
     'pims' \
+    'jedi=0.17.2' \
+    'trackpy' \
+    'voila' \
+    'lmfit' \
+    'pybroom' \
+    'appmode' \
     && \
     conda clean --all -f -y && \
     # Activate ipywidgets extension in the environment that runs the notebook server
