@@ -51,6 +51,7 @@ RUN conda install --quiet --yes \
     'lmfit' \
     'pybroom' \
     'appmode' \
+    'moviepy' \
     && \
     conda clean --all -f -y && \
     # Activate ipywidgets extension in the environment that runs the notebook server
