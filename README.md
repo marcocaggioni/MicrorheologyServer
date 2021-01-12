@@ -21,4 +21,14 @@ http://127.0.0.1:8888/?token=c5ae2e40409bb4eff8a2064e4f119d142466054a3d5af560
 Use the jupyter terminal to clone this repository
 
 ```
-git clone 
+git clone https://github.com/marcocaggioni/microrheology-server.git
+```
+
+Install microrheology requireements
+
+```
+cd microrheology-server
+conda install --yes --file requirements.txt
+```
+
+
