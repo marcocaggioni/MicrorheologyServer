@@ -9,7 +9,6 @@ pandas
 pybroom
 seaborn
 jupyter_contrib_nbextensions
-pivottablejs
 pybroom
 pymongo
 jupyter_contrib_nbextensions
