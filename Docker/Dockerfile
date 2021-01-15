@@ -52,6 +52,7 @@ RUN conda install --quiet --yes \
     'pybroom' \
     'appmode' \
     'moviepy' \
+    'openpyxl' \
     && \
     conda clean --all -f -y && \
     # Activate ipywidgets extension in the environment that runs the notebook server
@@ -87,3 +88,13 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
 USER $NB_UID
 
 WORKDIR $HOME
+
+RUN git clone https://github.com/marcocaggioni/microrheology_water_test.git && \
+    cd microrheology_water_test && \
+    mkdir data && \
+    wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_100dil_water_01umpix_100fps_short.cin && \
+    wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_water_01umpix_100fps_short.cine && \
+    wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_100dil_water_01umpix_100fps_short.mp4 && \
+    wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_water_01umpix_100fps_short.mp4
+    
+WORKDIR $HOME    
