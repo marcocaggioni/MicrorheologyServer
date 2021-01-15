@@ -6,7 +6,7 @@ The docker file is based on the official docker image for jupyter/scipy on doker
 to start the image use the command:
 
 ```
-docker run -it -p 9999:8888 -v C:\path\tohost\folder:/home/jovyan/work --user root -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes  mcaggio/microrheologyserver start-notebook.sh --NotebookApp.password='sha1:3eda2773dc9b:cc1b2789ab15db84967eeadf594b233c3062b9d0' --NotebookApp.base_url=/microrheology
+docker run -it -p 9999:8888 -v C:\path\tohost\folder:/home/jovyan/work --user root -e GRANT_SUDO=yes -e JUPYTER_ENABLE_LAB=yes  mcaggio/microrheologyserver start-notebook.sh --NotebookApp.password='sha1:your encripted password' --NotebookApp.base_url=/microrheology
 ```
 
 the command provided uses several initialization parameters:
