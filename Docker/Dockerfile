@@ -92,6 +92,7 @@ WORKDIR $HOME
 RUN git clone https://github.com/marcocaggioni/microrheology_water_test.git && \
     cd microrheology_water_test && \
     mkdir data && \
+    cd data && \
     wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_100dil_water_01umpix_100fps_short.cin && \
     wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_water_01umpix_100fps_short.cine && \
     wget https://github.com/marcocaggioni/microrheology_water_test/releases/download/1.0/400nm_100dil_water_01umpix_100fps_short.mp4 && \
