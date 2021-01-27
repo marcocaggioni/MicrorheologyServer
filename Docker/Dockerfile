@@ -92,7 +92,7 @@ USER $NB_UID
 WORKDIR $HOME
 
 RUN pip install git+https://github.com/rheopy/rheofit.git && \
-    git clone https://github.com/rheopy/rheofit.git
+    git clone https://github.com/rheopy/rheofit.git && \
     git clone https://github.com/marcocaggioni/microrheology_water_test.git && \
     cd microrheology_water_test && \
     mkdir data && \
