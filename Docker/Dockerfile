@@ -41,8 +41,8 @@ RUN conda install --quiet --yes \
     'sympy=1.7.*' \
     'vincent=0.4.*' \
     'widgetsnbextension=3.5.*'\
-    'xlrd=2.0.*' && \
-	'pims' \
+    'xlrd=2.0.*' \
+    'pims' \
     'trackpy' \
     'voila' \
     'lmfit' \
@@ -51,7 +51,7 @@ RUN conda install --quiet --yes \
     'moviepy' \
     'openpyxl' \
     'opencv' \
-    'openpyxl' \
+    'openpyxl' && \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
