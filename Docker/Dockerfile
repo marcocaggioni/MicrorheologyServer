@@ -45,7 +45,6 @@ RUN conda install --quiet --yes \
     'widgetsnbextension=3.5.*'\
     'xlrd=1.2.*' \
     'pims' \
-    'jedi=0.17.2' \
     'trackpy' \
     'voila' \
     'lmfit' \
@@ -53,6 +52,9 @@ RUN conda install --quiet --yes \
     'appmode' \
     'moviepy' \
     'openpyxl' \
+    'opencv' \
+    'openpyxl' \
+    'voila' \
     && \
     conda clean --all -f -y && \
     # Activate ipywidgets extension in the environment that runs the notebook server
@@ -89,7 +91,9 @@ USER $NB_UID
 
 WORKDIR $HOME
 
-RUN git clone https://github.com/marcocaggioni/microrheology_water_test.git && \
+RUN pip install git+https://github.com/rheopy/rheofit.git && \
+    git clone https://github.com/rheopy/rheofit.git
+    git clone https://github.com/marcocaggioni/microrheology_water_test.git && \
     cd microrheology_water_test && \
     mkdir data && \
     cd data && \
